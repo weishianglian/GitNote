@@ -51,8 +51,28 @@ $ git commit -m "init commit"
 $ git commit --allow-empty -m "Empty"
 ```
 
+## 工作區、暫存區與儲存庫
+<table style="text-align: center;">
+  <tr>
+    <td colspan="2">Working Directory</td>
+    <td colspan="2">Staging Area</td>
+    <td colspan="2">Repository</td>
+  </tr>
+   <tr>
+    <td></td>
+    <td colspan="2">git add</td>
+    <td colspan="2">git commit</td>
+    <td></td>
+  </tr>
+</table>
 
+### 示意圖
+![git-all-status](images/git-all-status.png)
 
+## 檢視紀錄
+```
+$ git log
+```
 
 
 
