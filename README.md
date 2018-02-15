@@ -72,6 +72,26 @@ $ git commit --allow-empty -m "Empty"
 ## 檢視紀錄
 ```
 $ git log
+$ git log --oneline --graph
+```
+
+### 進階用法
+#### 找某人的 Commit
+```
+$ git log --oneline --author="NAME"
+```
+#### 找 Commit 訊息的關鍵字
+```
+$ git log --oneline --grep="MESSAGE"
+```
+#### 找 Commit 檔案內容中有提到的關鍵字
+```
+$ git log --oneline -S "KEYWORD"
+```
+
+#### 依 Commit 時間查詢
+```
+$ git log --oneline --since="9am" --until="12am" --after="2017-01"
 ```
 
 
