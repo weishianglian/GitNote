@@ -163,3 +163,49 @@ $ git reset --hard
 :-|:-:|:-:|:-:|
 Commit 拆出來的檔案| 丟回工作目錄|丟回暫存區| 直接丟掉
 
+## 找到所有的紀錄
+```
+$ git reflog
+$ git log --oneline -g
+```
+
+## HEAD 是現在所在的分支位置
+```
+$ cat .git/HEAD
+```
+
+## Git 分支
+```
+$ git branch
+```
+
+### 建立分支
+```
+$ git branch cat
+```
+
+### 更名分支
+```
+$ git branch -m cat tiger
+```
+
+### 刪除分支
+```
+$ git branch -d dog
+```
+
+#### 強制刪除
+```
+$ git banch -D dog
+```
+
+### 切換分支
+```
+$ git checkout tiger
+```
+
+#### 切換並建立分支
+```
+$ git checkout -b god
+```
+
