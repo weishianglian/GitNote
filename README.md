@@ -94,7 +94,19 @@ $ git log --oneline -S "KEYWORD"
 $ git log --oneline --since="9am" --until="12am" --after="2017-01"
 ```
 
+## 刪除或更名檔案
+```
+$ rm FILE && git add . 
+# == $ git rm FILE
 
+$ mv FILE && git add . 
+# == $ git mv FILE
+```
+
+## 修改 Commit 紀錄
+```
+$ git commit -amend -m "REPLACE_MESSAGE"
+```
 
 
 
