@@ -145,3 +145,21 @@ $ git reset HEAD^
 $ git reset master^
 4 git reset HEAD~1
 ```
+
+### Git Reset 模式
+```
+$ git reset --mixed
+$ git reset --soft
+$ git reset --hard
+```
+模式|mixed 模式|soft 模式|hard 模式
+:-|:-:|:-:|:-:|
+工作目錄|不變|不變|丟掉
+暫存區|丟掉|不變|丟掉
+
+---
+
+模式|mixed 模式（預設）|soft 模式 |hard 模式
+:-|:-:|:-:|:-:|
+Commit 拆出來的檔案| 丟回工作目錄|丟回暫存區| 直接丟掉
+
