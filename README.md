@@ -108,7 +108,20 @@ $ mv FILE && git add .
 $ git commit -amend -m "REPLACE_MESSAGE"
 ```
 
+## 追加檔案到上一次的 Commit
+```
+$ git commit --amend --no-edit
+```
 
+## 將檔案從 Git 中移除
+```
+$ git rm --cached FILE
+```
+
+## 將特定檔案忽略
+```
+.gitignore
+```
 
 
 
