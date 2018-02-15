@@ -209,3 +209,8 @@ $ git checkout tiger
 $ git checkout -b god
 ```
 
+## 合併分支
+```
+$ git merge cat
+```
+
