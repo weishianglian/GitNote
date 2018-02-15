@@ -123,6 +123,25 @@ $ git rm --cached FILE
 .gitignore
 ```
 
+## 看到檔案在每次 Commit 的修改
+```
+$ git log -p FILE
+```
 
+## 檔案是誰寫的！
+```
+$ git blame
+```
 
+## 從 Staging Area 救回誤刪的檔案
+```
+$ git checkout FILE
+$ git checkout .
+```
 
+## 拆掉重做 Commit 
+```
+$ git reset HEAD^
+$ git reset master^
+4 git reset HEAD~1
+```
