@@ -212,5 +212,10 @@ $ git checkout -b god
 ## 合併分支
 ```
 $ git merge cat
+$ git merge cat --no-ff
 ```
 
+## 修改歷史
+```
+$ git rebase BRANCH
+```
