@@ -218,4 +218,25 @@ $ git merge cat --no-ff
 ## 修改歷史
 ```
 $ git rebase BRANCH
+$ git rebase -i COMMIT
+```
+
+## 放下手邊工作
+```
+$ git stash
+$ git stash list
+$ git stash pop
+```
+
+## 推向遠端
+```
+$ git remote add origin URL
+$ git push -u origin master
+```
+
+## 產生 ssh key
+```
+$ ssh-keygen
+$ cat ~/.ssh/id_rsa.pub
+$ pbcopy < ~/.ssh/id_rsa.pub
 ```
