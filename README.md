@@ -1,32 +1,33 @@
-# 為你自己學 Git 筆記
+<<<<<<< HEAD
+# Note: Learning Git for yourself
 
-## 使用者設定
-### 設定指令
+## User Configuration
+### Command Settings
 ```
 $ git config --global user.name "NAME"
 $ git config --global user.email "EMAIL"
 ```
-### 檢視設定
+### Settings List
 ```
 $ git config --list
 ```
-### 設定檔位置
+### Setting File Path
 ```
 ~/.gitconfig
 ```
-### 每個專案設定不同的的作者
+### Setting Different Users
 ```
 $ git config --local user.name "LOCAL"
 $ git config --local user.email "LOCAL"
 ```
 
-## 其他方便的設定
-### 更換預設編輯器
+## Convenient Settings
+### Changing Default Editor
 ```
 $ git config --global core.editor emacs
 ```
 
-### Git 指令縮寫
+### Git Command Abbreviations
 ```
 $ git config --global alias.co checkout
 $ git config --global alias.br branch
@@ -35,57 +36,57 @@ $ git config --global alias.l "log --oneline --graph"
 $ git config --global alias.ls 'log --graph --pretty=format:"%h <%an> %ar %s"'
 ```
 
-## 新增、初始 Repository
+## Creating and Initialising Repository
 ```
 $ git init
 ```
-## 把檔案交給 Git
+## Passing Control to  Git
 ```
 $ git status
 $ git add .
 $ git commit -m "init commit"
 ```
 
-### 允許 Commit Empty
+### Allowing Commit Empty
 ```
 $ git commit --allow-empty -m "Empty"
 ```
 
-## 工作區、暫存區與儲存庫
+## Working Directory, Staging Area and Repository 
 |Working Directory|Staging Area|Repository|
 |:-:|:-:|:-:|
 |git add|git commit||
 
-### 示意圖
+### Fig.
 ![git all status](images/git-all-states.png)
 
 
-## 檢視紀錄
+## View Log
 ```
 $ git log
 $ git log --oneline --graph
 ```
 
-### 進階用法
-#### 找某人的 Commit
+### Advanced Commands
+#### Querying Someone's Commit
 ```
 $ git log --oneline --author="NAME"
 ```
-#### 找 Commit 訊息的關鍵字
+#### Querying Keywords from Commit Message
 ```
 $ git log --oneline --grep="MESSAGE"
 ```
-#### 找 Commit 檔案內容中有提到的關鍵字
+#### Querying Keywords from Commit Files
 ```
 $ git log --oneline -S "KEYWORD"
 ```
 
-#### 依 Commit 時間查詢
+#### Querying Commit by Date or Time
 ```
 $ git log --oneline --since="9am" --until="12am" --after="2017-01"
 ```
 
-## 刪除或更名檔案
+## Delete or Rename Files
 ```
 $ rm FILE && git add . 
 # == $ git rm FILE
@@ -94,140 +95,139 @@ $ mv FILE && git add .
 # == $ git mv FILE
 ```
 
-## 修改 Commit 紀錄
+## Modifiying Commit Records
 ```
 $ git commit -amend -m "REPLACE_MESSAGE"
 ```
 
-## 追加檔案到上一次的 Commit
+## Adding Files to Previous Commit
 ```
 $ git commit --amend --no-edit
 ```
 
-## 將檔案從 Git 中移除
+## Removing Files from Git
 ```
 $ git rm --cached FILE
 ```
 
-## 將特定檔案忽略
+## Ignoring Specific Files
 ```
 .gitignore
 ```
 
-## 看到檔案在每次 Commit 的修改
+## Checking Files' Modification from Every Commits
 ```
 $ git log -p FILE
 ```
 
-## 檔案是誰寫的！
+## Checking Files' Editor
 ```
 $ git blame
 ```
 
-## 從 Staging Area 救回誤刪的檔案
+## Rescuing Files from Staging Area
 ```
 $ git checkout FILE
 $ git checkout .
 ```
 
-## 拆掉重做 Commit 
+## Reseting Commits
 ```
 $ git reset HEAD^
 $ git reset master^
 4 git reset HEAD~1
 ```
 
-### Git Reset 模式
+### Git Reset Modes
 ```
 $ git reset --mixed
 $ git reset --soft
 $ git reset --hard
 ```
-模式|mixed 模式|soft 模式|hard 模式
+Modes |mixed mode|soft mode|hard mode
 :-|:-:|:-:|:-:|
-工作目錄|不變|不變|丟掉
-暫存區|丟掉|不變|丟掉
+Working Directory|Keep|Keep|Abort
+Staging Area|Abort|Keep|Abort
 
 ---
 
-模式|mixed 模式（預設）|soft 模式 |hard 模式
+Modes|mixed mode（default）|soft mode |hard mode
 :-|:-:|:-:|:-:|
-Commit 拆出來的檔案| 丟回工作目錄|丟回暫存區| 直接丟掉
+Files from Commit | to Working Directory|to Staging Area| Abort
 
-## 找到所有的紀錄
+## Querying All Log
 ```
 $ git reflog
 $ git log --oneline -g
 ```
 
-## HEAD 是現在所在的分支位置
+## HEAD is a branch where we are now
 ```
 $ cat .git/HEAD
 ```
 
-## Git 分支
+## Git Branchs
 ```
 $ git branch
 ```
 
-### 建立分支
+### Creat Branchs
 ```
 $ git branch cat
 ```
 
-### 更名分支
+### Rename Branchs
 ```
 $ git branch -m cat tiger
 ```
 
-### 刪除分支
+### Delete Branchs
 ```
 $ git branch -d dog
 ```
 
-#### 強制刪除
+#### Force Delete Branchs
 ```
 $ git banch -D dog
 ```
 
-### 切換分支
+### Switch Branchs
 ```
 $ git checkout tiger
 ```
 
-#### 切換並建立分支
+#### Switch and Create New Branchs
 ```
 $ git checkout -b god
 ```
 
-## 合併分支
+## Merge Branchs
 ```
 $ git merge cat
 $ git merge cat --no-ff
 ```
 
-## 修改歷史
+## Modifiy Histories
 ```
 $ git rebase BRANCH
 $ git rebase -i COMMIT
 ```
 
-## 放下手邊工作
+## Stash
 ```
 $ git stash
 $ git stash list
 $ git stash pop
 ```
 
-## 推向遠端
+## Push to Remote Side
 ```
 $ git remote add origin URL
 $ git push -u origin master
 ```
 
-## 產生 ssh key
+## Generate ssh key
 ```
 $ ssh-keygen
 $ cat ~/.ssh/id_rsa.pub
 $ pbcopy < ~/.ssh/id_rsa.pub
-```
