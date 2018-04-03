@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Note: Learning Git for yourself
 
 ## User Configuration
